@@ -15,6 +15,7 @@ kendryte-standalone-sdk/lib/drivers/gpio.c
 kendryte-standalone-sdk/lib/drivers/gpiohs.c
 kendryte-standalone-sdk/lib/drivers/i2c.c
 kendryte-standalone-sdk/lib/drivers/i2s.c
+kendryte-standalone-sdk/lib/drivers/kpu.c
 kendryte-standalone-sdk/lib/drivers/plic.c
 kendryte-standalone-sdk/lib/drivers/pwm.c
 kendryte-standalone-sdk/lib/drivers/rtc.c

@@ -21,7 +21,6 @@ kendryte-standalone-sdk/lib/drivers/pwm.c
 kendryte-standalone-sdk/lib/drivers/rtc.c
 kendryte-standalone-sdk/lib/drivers/sha256.c
 kendryte-standalone-sdk/lib/drivers/spi.c
-kendryte-standalone-sdk/lib/drivers/sysclock.c
 kendryte-standalone-sdk/lib/drivers/sysctl.c
 kendryte-standalone-sdk/lib/drivers/timer.c
 kendryte-standalone-sdk/lib/drivers/uart.c

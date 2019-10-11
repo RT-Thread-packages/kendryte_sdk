@@ -23,8 +23,6 @@ kendryte-standalone-sdk/lib/drivers/sha256.c
 kendryte-standalone-sdk/lib/drivers/spi.c
 kendryte-standalone-sdk/lib/drivers/sysctl.c
 kendryte-standalone-sdk/lib/drivers/timer.c
-kendryte-standalone-sdk/lib/drivers/uart.c
-kendryte-standalone-sdk/lib/drivers/uarths.c
 kendryte-standalone-sdk/lib/drivers/utils.c
 kendryte-standalone-sdk/lib/drivers/wdt.c
 ''')

@@ -25,11 +25,32 @@ kendryte-standalone-sdk/lib/drivers/sysctl.c
 kendryte-standalone-sdk/lib/drivers/timer.c
 kendryte-standalone-sdk/lib/drivers/utils.c
 kendryte-standalone-sdk/lib/drivers/wdt.c
+kendryte-standalone-sdk/lib/nncase/runtime/kernel_registry.cpp
+kendryte-standalone-sdk/lib/nncase/runtime/interpreter.cpp
+kendryte-standalone-sdk/lib/nncase/runtime/neutral/neutral_ops.cpp
+kendryte-standalone-sdk/lib/nncase/runtime/k210/interpreter.cpp
+kendryte-standalone-sdk/lib/nncase/runtime/k210/k210_ops.cpp
+kendryte-standalone-sdk/lib/nncase/runtime/cpu/cpu_ops.cpp
+kendryte-standalone-sdk/lib/nncase/nncase.cpp
 ''')
-CPPPATH = [cwd + '/kendryte-standalone-sdk/lib/drivers/include', 
+CPPPATH = [cwd + '/kendryte-standalone-sdk/lib/drivers/include',
+cwd + '/kendryte-standalone-sdk/lib/nncase/include',  
+cwd + '/kendryte-standalone-sdk/third_party/xtl/include',
 cwd + '/kendryte-standalone-sdk/lib/bsp/include',
 cwd + '/kendryte-standalone-sdk/lib/utils/include']
-CPPDEFINES = ['CONFIG_LOG_COLORS', 'CONFIG_LOG_ENABLE', 'CONFIG_LOG_LEVEL=LOG_VERBOSE', 'FPGA_PLL', 'LOG_KERNEL', '__riscv64']
+CPPDEFINES = ['NNCASE_TARGET=k210',
+'TCB_SPAN_NO_EXCEPTIONS',
+'TCB_SPAN_NO_CONTRACT_CHECKING',
+'LV_CONF_INCLUDE_SIMPLE', 
+'_IOMEM_MALLOC_H', 
+'iomem_malloc=malloc', 
+'iomem_free=free', 
+'CONFIG_LOG_COLORS', 
+'CONFIG_LOG_ENABLE', 
+'CONFIG_LOG_LEVEL=LOG_VERBOSE', 
+'FPGA_PLL', 
+'LOG_KERNEL', 
+'__riscv64']
 
 group = DefineGroup('SDK', src, depend = ['PKG_USING_KENDRYTE_SDK'], CPPPATH = CPPPATH, LOCAL_CPPDEFINES = CPPDEFINES)
 

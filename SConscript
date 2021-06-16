@@ -2,7 +2,6 @@ from building import *
 
 cwd     = GetCurrentDir()
 src     = Split('''
-kendryte-standalone-sdk/lib/bsp/sleep.c
 kendryte-standalone-sdk/lib/bsp/entry.c
 kendryte-standalone-sdk/lib/bsp/entry_user.c
 kendryte-standalone-sdk/lib/drivers/aes.c
@@ -52,6 +51,6 @@ CPPDEFINES = ['NNCASE_TARGET=k210',
 'LOG_KERNEL', 
 '__riscv64']
 
-group = DefineGroup('SDK', src, depend = ['PKG_USING_KENDRYTE_SDK'], CPPPATH = CPPPATH, LOCAL_CPPDEFINES = CPPDEFINES)
+group = DefineGroup('kendryte-sdk', src, depend = ['PKG_USING_KENDRYTE_SDK'], CPPPATH = CPPPATH, LOCAL_CPPDEFINES = CPPDEFINES)
 
 Return('group')

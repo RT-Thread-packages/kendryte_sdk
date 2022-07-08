@@ -1,5 +1,8 @@
 # 勘智SDK驱动包
 
+### 此仓库已废弃，请移步：https://github.com/RT-Thread-packages/kendryte-standalone-sdk
+
+
 ## 1、介绍
 
 勘智SDK驱动包是一份RT-Thread上勘智K210处理器对应的外设驱动包，主要是对K210上提供的standalone sdk提
